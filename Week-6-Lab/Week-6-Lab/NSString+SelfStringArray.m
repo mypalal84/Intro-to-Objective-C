@@ -26,14 +26,6 @@
     return output;
 }
 
-//+(NSMutableString *)reversed:(NSMutableString *)str{
-//    NSMutableString *reverseString = [NSMutableString stringWithCapacity:str.length];
-//    
-//    for (int i = (int)str.length-1; i>= 0; i--){
-//        [reverseString appendFormat:@"%c", [str characterAtIndex:i]];
-//    }
-//    return reverseString;
-//}
 
 
 @end

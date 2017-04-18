@@ -16,6 +16,7 @@
 		7FB3A1191EA55F760011BB65 /* NSString+SelfStringArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A1181EA55F760011BB65 /* NSString+SelfStringArray.m */; };
 		7FB3A11C1EA58A080011BB65 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A11B1EA58A080011BB65 /* Person.m */; };
 		7FB3A11F1EA592000011BB65 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A11E1EA592000011BB65 /* Employee.m */; };
+		7FB3A1231EA687680011BB65 /* EmployeeDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A1221EA687680011BB65 /* EmployeeDatabase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		7FB3A11D1EA592000011BB65 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		7FB3A11E1EA592000011BB65 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		7FB3A1201EA667470011BB65 /* PersonQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonQueue.h; sourceTree = "<group>"; };
+		7FB3A1211EA687680011BB65 /* EmployeeDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDatabase.h; sourceTree = "<group>"; };
+		7FB3A1221EA687680011BB65 /* EmployeeDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDatabase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +71,18 @@
 		7FB3A0FF1EA55D610011BB65 /* Week-6-Lab */ = {
 			isa = PBXGroup;
 			children = (
+				7FB3A1241EA687800011BB65 /* Models */,
+				7FB3A1251EA687910011BB65 /* Views */,
 				7FB3A11A1EA58A080011BB65 /* Person.h */,
+				7FB3A1261EA6879A0011BB65 /* Controllers */,
 				7FB3A11B1EA58A080011BB65 /* Person.m */,
 				7FB3A11D1EA592000011BB65 /* Employee.h */,
 				7FB3A11E1EA592000011BB65 /* Employee.m */,
 				7FB3A1201EA667470011BB65 /* PersonQueue.h */,
 				7FB3A1171EA55F760011BB65 /* NSString+SelfStringArray.h */,
 				7FB3A1181EA55F760011BB65 /* NSString+SelfStringArray.m */,
+				7FB3A1211EA687680011BB65 /* EmployeeDatabase.h */,
+				7FB3A1221EA687680011BB65 /* EmployeeDatabase.m */,
 				7FB3A1061EA55D610011BB65 /* ViewController.h */,
 				7FB3A1071EA55D610011BB65 /* ViewController.m */,
 				7FB3A1031EA55D610011BB65 /* AppDelegate.h */,
@@ -94,6 +102,27 @@
 				7FB3A1011EA55D610011BB65 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7FB3A1241EA687800011BB65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7FB3A1251EA687910011BB65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7FB3A1261EA6879A0011BB65 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +203,7 @@
 				7FB3A11F1EA592000011BB65 /* Employee.m in Sources */,
 				7FB3A1051EA55D610011BB65 /* AppDelegate.m in Sources */,
 				7FB3A1021EA55D610011BB65 /* main.m in Sources */,
+				7FB3A1231EA687680011BB65 /* EmployeeDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

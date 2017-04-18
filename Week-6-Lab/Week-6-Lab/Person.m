@@ -32,7 +32,7 @@ NSNumber *yearsOld = [self age];
 
 //copy person
 -(id)copyWithZone:(NSZone *)zone{
-    Person *person = [[[self class] alloc]init];
+    Person *person = [[[self class] alloc]init];//[self class] allows subclass to work as well(employee)
     person.firstName = self.firstName;
     person.lastName = self.lastName;
     person.age = self.age;

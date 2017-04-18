@@ -19,7 +19,7 @@
     NSString *first;
     NSString *output;
     output = [NSString stringWithFormat:@"%c", [input characterAtIndex:input.length -1]];
-    for (int i = input.length -2; i >= 0; i--){
+    for(int i = input.length -2; i >= 0; i--){
         first = [NSString stringWithFormat:@"%c", [input characterAtIndex:i]];
         output = [output stringByAppendingString:first];
     }

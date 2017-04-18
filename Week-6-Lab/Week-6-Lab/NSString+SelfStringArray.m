@@ -19,21 +19,13 @@
     NSString *first;
     NSString *output;
     output = [NSString stringWithFormat:@"%c", [input characterAtIndex:input.length -1]];
-    for (int i = input.length -2; i >= 0; i--){
+    for(int i = input.length -2; i >= 0; i--){
         first = [NSString stringWithFormat:@"%c", [input characterAtIndex:i]];
         output = [output stringByAppendingString:first];
     }
     return output;
 }
 
-//+(NSMutableString *)reversed:(NSMutableString *)str{
-//    NSMutableString *reverseString = [NSMutableString stringWithCapacity:str.length];
-//    
-//    for (int i = (int)str.length-1; i>= 0; i--){
-//        [reverseString appendFormat:@"%c", [str characterAtIndex:i]];
-//    }
-//    return reverseString;
-//}
 
 
 @end

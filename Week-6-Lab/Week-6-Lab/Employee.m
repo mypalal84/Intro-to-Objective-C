@@ -46,9 +46,11 @@ NSString *_managerName;
 -(NSNumber *)employeeNumber{
     return _employeeNumber;
 }
+
 -(NSNumber *)yearsEmployed{
     return _yearsEmployed;
 }
+
 -(NSString *)managerName{
     return _managerName;
 }
@@ -57,9 +59,11 @@ NSString *_managerName;
 -(void)setEmployeeNumber:(NSNumber *)employeeNumber{
     _employeeNumber = employeeNumber;
 }
+
 -(void)setYearsEmployed:(NSNumber *)yearsEmployed{
     _yearsEmployed = yearsEmployed;
 }
+
 -(void)setName:(NSString *)managerName{
     _managerName = managerName;
 }

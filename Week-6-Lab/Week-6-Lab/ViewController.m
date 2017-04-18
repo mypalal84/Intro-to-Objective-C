@@ -20,6 +20,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    Employee *original = [[Employee alloc]initWithFirstName:@"Alex" lastName:@"Cahn" age:@33 yearsEmployed:@1 andManager:@"Adam"];
+//    
+//    Employee *newEmployee = [original copy];
+//    
+//    newEmployee.firstName = @"Adam";
+//    
+//    NSLog(@"%@", original.firstName);
+//    NSLog(@"%@", newEmployee.firstName);
+    
+//    [[EmployeeDatabase shared] count];//how to access singleton<-
+    
     NSArray *array = @"Objective C is hard".returnStrArray;
     for (NSString *word in array) {
         NSLog(@"%@",word);

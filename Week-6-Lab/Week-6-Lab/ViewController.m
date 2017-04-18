@@ -10,6 +10,7 @@
 #import "NSString+SelfStringArray.h"
 #import "Person.h"
 #import "Employee.h"
+#import "EmployeeDatabase.h"
 
 @interface ViewController ()
 
@@ -41,6 +42,8 @@
     [adam setManagerName:@"Brandy"];
     NSLog(@"%@", [adam managerName]);
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
 
 

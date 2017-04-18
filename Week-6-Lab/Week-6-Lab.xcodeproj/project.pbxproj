@@ -73,23 +73,8 @@
 			children = (
 				7FB3A1241EA687800011BB65 /* Models */,
 				7FB3A1251EA687910011BB65 /* Views */,
-				7FB3A11A1EA58A080011BB65 /* Person.h */,
 				7FB3A1261EA6879A0011BB65 /* Controllers */,
-				7FB3A11B1EA58A080011BB65 /* Person.m */,
-				7FB3A11D1EA592000011BB65 /* Employee.h */,
-				7FB3A11E1EA592000011BB65 /* Employee.m */,
-				7FB3A1201EA667470011BB65 /* PersonQueue.h */,
-				7FB3A1171EA55F760011BB65 /* NSString+SelfStringArray.h */,
-				7FB3A1181EA55F760011BB65 /* NSString+SelfStringArray.m */,
-				7FB3A1211EA687680011BB65 /* EmployeeDatabase.h */,
-				7FB3A1221EA687680011BB65 /* EmployeeDatabase.m */,
-				7FB3A1061EA55D610011BB65 /* ViewController.h */,
-				7FB3A1071EA55D610011BB65 /* ViewController.m */,
-				7FB3A1031EA55D610011BB65 /* AppDelegate.h */,
-				7FB3A1041EA55D610011BB65 /* AppDelegate.m */,
-				7FB3A1091EA55D610011BB65 /* Main.storyboard */,
 				7FB3A10C1EA55D610011BB65 /* Assets.xcassets */,
-				7FB3A10E1EA55D610011BB65 /* LaunchScreen.storyboard */,
 				7FB3A1111EA55D610011BB65 /* Info.plist */,
 				7FB3A1001EA55D610011BB65 /* Supporting Files */,
 			);
@@ -107,6 +92,15 @@
 		7FB3A1241EA687800011BB65 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7FB3A11A1EA58A080011BB65 /* Person.h */,
+				7FB3A11B1EA58A080011BB65 /* Person.m */,
+				7FB3A11D1EA592000011BB65 /* Employee.h */,
+				7FB3A11E1EA592000011BB65 /* Employee.m */,
+				7FB3A1211EA687680011BB65 /* EmployeeDatabase.h */,
+				7FB3A1221EA687680011BB65 /* EmployeeDatabase.m */,
+				7FB3A1171EA55F760011BB65 /* NSString+SelfStringArray.h */,
+				7FB3A1181EA55F760011BB65 /* NSString+SelfStringArray.m */,
+				7FB3A1201EA667470011BB65 /* PersonQueue.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -114,6 +108,8 @@
 		7FB3A1251EA687910011BB65 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7FB3A1091EA55D610011BB65 /* Main.storyboard */,
+				7FB3A10E1EA55D610011BB65 /* LaunchScreen.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -121,6 +117,10 @@
 		7FB3A1261EA6879A0011BB65 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7FB3A1061EA55D610011BB65 /* ViewController.h */,
+				7FB3A1071EA55D610011BB65 /* ViewController.m */,
+				7FB3A1031EA55D610011BB65 /* AppDelegate.h */,
+				7FB3A1041EA55D610011BB65 /* AppDelegate.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

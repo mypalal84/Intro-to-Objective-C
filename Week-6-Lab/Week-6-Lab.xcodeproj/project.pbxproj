@@ -35,6 +35,7 @@
 		7FB3A11B1EA58A080011BB65 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		7FB3A11D1EA592000011BB65 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		7FB3A11E1EA592000011BB65 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
+		7FB3A1201EA667470011BB65 /* PersonQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonQueue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 				7FB3A11B1EA58A080011BB65 /* Person.m */,
 				7FB3A11D1EA592000011BB65 /* Employee.h */,
 				7FB3A11E1EA592000011BB65 /* Employee.m */,
+				7FB3A1201EA667470011BB65 /* PersonQueue.h */,
 				7FB3A1171EA55F760011BB65 /* NSString+SelfStringArray.h */,
 				7FB3A1181EA55F760011BB65 /* NSString+SelfStringArray.m */,
 				7FB3A1061EA55D610011BB65 /* ViewController.h */,

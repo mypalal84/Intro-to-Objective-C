@@ -39,7 +39,7 @@
     [adam setEmployeeNumber:@3987094358275089];
     [adam setYearsEmployed:@2];
     [adam setManagerName:@"Brandy"];
-    NSLog(@"%@", [adam description]);
+    NSLog(@"%@", [adam managerName]);
     // Do any additional setup after loading the view, typically from a nib.
 }
 

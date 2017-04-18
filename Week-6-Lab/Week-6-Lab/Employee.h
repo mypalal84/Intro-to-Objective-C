@@ -13,12 +13,14 @@
 //properties
 @property(strong, nonatomic) NSNumber *employeeNumber;
 @property(strong, nonatomic) NSNumber *yearsEmployed;
-@property(strong, nonatomic) NSString *managerName;
+@property(copy, nonatomic) NSString *managerName;
+@property(copy, nonatomic) NSString *email;
 
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
                              age:(NSNumber *)age
                    yearsEmployed:(NSNumber *)yearsEmployed
-                      andManager:(NSString *)managerName;
+                     managerName:(NSString *)managerName
+                        andEmail:(NSString *)email;
 
 @end

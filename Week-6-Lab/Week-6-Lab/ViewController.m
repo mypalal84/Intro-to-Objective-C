@@ -8,8 +8,6 @@
 
 #import "ViewController.h"
 #import "NSString+SelfStringArray.h"
-#import "Person.h"
-#import "Employee.h"
 #import "EmployeeDatabase.h"
 
 @interface ViewController ()
@@ -32,21 +30,21 @@
     
 //    [[EmployeeDatabase shared] count];//how to access singleton<-
     
-    NSArray *array = @"Objective C is hard".returnStrArray;
-    for (NSString *word in array) {
-        NSLog(@"%@",word);
-    }
-    NSLog(@"%@",array);
-    
-    NSString *outputString;
-    outputString = [NSString reversed:@"Work Please"];
-    NSLog(@"%@", outputString);
-    
-    Person *alex = [[Person alloc] init];
-    [alex setFirstName:@"Alex"];
-    [alex setLastName:@"Cahn" ];
-    [alex setAge:@33];
-    [alex define];
+//    NSArray *array = @"Objective C is hard".returnStrArray;
+//    for (NSString *word in array) {
+//        NSLog(@"%@",word);
+//    }
+//    NSLog(@"%@",array);
+//    
+//    NSString *outputString;
+//    outputString = [NSString reversed:@"Work Please"];
+//    NSLog(@"%@", outputString);
+//    
+//    Person *alex = [[Person alloc] init];
+//    [alex setFirstName:@"Alex"];
+//    [alex setLastName:@"Cahn" ];
+//    [alex setAge:@33];
+//    [alex define];
     
     Employee *employeeOne = [[Employee alloc]initWithFirstName:@"Serg" lastName:@"Tsogtbaatar" age:@24 yearsEmployed:@0 managerName:@"Alex" andEmail:@"sergtsaeb@something.com"];
     
@@ -60,7 +58,7 @@
     [adam setYearsEmployed:@2];
     [adam setManagerName:@"Brandy"];
     [adam setEmail:@"adam@codefellows.com"];
-    NSLog(@"%@", [adam managerName]);
+//    NSLog(@"%@", [adam managerName]);
     // Do any additional setup after loading the view, typically from a nib.
 
     [[EmployeeDatabase shared] add:employeeOne];

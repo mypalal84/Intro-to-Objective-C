@@ -48,16 +48,24 @@
     [alex setAge:@33];
     [alex define];
     
-    
     Employee *employeeOne = [[Employee alloc]initWithFirstName:@"Serg" lastName:@"Tsogtbaatar" age:@24 yearsEmployed:@0 managerName:@"Alex" andEmail:@"sergtsaeb@something.com"];
     
+    Employee *employeeTwo = [[Employee alloc]initWithFirstName:@"Cathy" lastName:@"Oun" age:@25 yearsEmployed:@2 managerName:@"Adam" andEmail:@"cathy@piccollage.com"];
+    
+    Employee *employeeThree = [[Employee alloc]initWithFirstName:@"Jay" lastName:@"Balderas" age:@27 yearsEmployed:@13 managerName:@"Adam" andEmail:@"jay@codefellows.com"];
+    
     Employee *adam = [[Employee alloc]init];
+    [adam setFirstName:@"Adam"];
     [adam setEmployeeNumber:@3987094358275089];
     [adam setYearsEmployed:@2];
     [adam setManagerName:@"Brandy"];
+    [adam setEmail:@"adam@codefellows.com"];
     NSLog(@"%@", [adam managerName]);
     // Do any additional setup after loading the view, typically from a nib.
+
     [[EmployeeDatabase shared] add:employeeOne];
+    [[EmployeeDatabase shared] add:employeeTwo];
+    [[EmployeeDatabase shared] add:employeeThree];
     [[EmployeeDatabase shared] add:adam];
 }
 

@@ -23,14 +23,24 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        shared = [[[self class] alloc]init];
+    shared = [[EmployeeDatabase alloc]init];
     });
     
     return shared;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _employees = [[NSMutableArray alloc]init];
+    }
+    return self;
+}
+
 -(NSInteger)count{
-    return [self.employees count];
+
+    return self.employees.count;
 }
 
 -(NSArray *)allEmployees{
@@ -42,7 +52,7 @@
 }
 
 -(void)add:(Employee *)employee{
-    [self.employees arrayByAddingObject:employee];
+    [self.employees addObject:employee];
 }
 
 -(void)remove:(Employee *)employee{

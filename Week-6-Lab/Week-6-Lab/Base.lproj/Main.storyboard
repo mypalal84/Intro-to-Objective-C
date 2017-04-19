@@ -223,7 +223,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="SaveButtonPressed" destination="LoA-aZ-Ac5" id="DDI-fZ-NxS"/>
                         <outlet property="age" destination="MOr-S3-Pf0" id="fDF-v1-rOk"/>
                         <outlet property="email" destination="lyu-uK-c8E" id="4ta-mf-AOS"/>
                         <outlet property="firstName" destination="pxe-nn-rKH" id="9kY-Of-uP7"/>

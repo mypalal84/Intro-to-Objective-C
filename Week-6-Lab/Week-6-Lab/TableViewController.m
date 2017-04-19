@@ -9,7 +9,7 @@
 #import "TableViewController.h"
 #import "EmployeeDatabase.h"
 
-@interface TableViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TableViewController () <UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
@@ -20,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.delegate = self;
     self.tableView.dataSource = self;
 //    [self.tableView reloadData];
 }
@@ -41,7 +40,6 @@
     NSArray *employees = [[EmployeeDatabase shared]allEmployees];
     Employee *currentEmployee = employees[indexPath.row];
     cell.textLabel.text =  currentEmployee.firstName;
-//    cell.textLabel.text = [employees[indexPath.row] name];
     
     return cell;
 }

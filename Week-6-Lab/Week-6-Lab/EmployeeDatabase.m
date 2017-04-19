@@ -23,7 +23,7 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-    shared = [[EmployeeDatabase alloc]init];
+    shared = [[[self class] alloc]init];
     });
     
     return shared;

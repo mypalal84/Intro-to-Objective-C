@@ -10,7 +10,7 @@
 #import "EmployeeDatabase.h"
 #import "Employee.h"
 
-@interface AddEmployeeViewController ()
+@interface AddEmployeeViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
@@ -29,6 +29,11 @@
 @end
 
 @implementation AddEmployeeViewController
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

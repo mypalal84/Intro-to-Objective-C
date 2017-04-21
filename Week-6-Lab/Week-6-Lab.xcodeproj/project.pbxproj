@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F5AADBD1EA80C7800AF5E2F /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5AADBC1EA80C7800AF5E2F /* AddEmployeeViewController.m */; };
 		7FB3A1021EA55D610011BB65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A1011EA55D610011BB65 /* main.m */; };
 		7FB3A1051EA55D610011BB65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A1041EA55D610011BB65 /* AppDelegate.m */; };
 		7FB3A1081EA55D610011BB65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A1071EA55D610011BB65 /* ViewController.m */; };
@@ -14,13 +15,15 @@
 		7FB3A10D1EA55D610011BB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB3A10C1EA55D610011BB65 /* Assets.xcassets */; };
 		7FB3A1101EA55D610011BB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB3A10E1EA55D610011BB65 /* LaunchScreen.storyboard */; };
 		7FB3A1191EA55F760011BB65 /* NSString+SelfStringArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A1181EA55F760011BB65 /* NSString+SelfStringArray.m */; };
-		7FB3A11C1EA58A080011BB65 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A11B1EA58A080011BB65 /* Person.m */; };
-		7FB3A11F1EA592000011BB65 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A11E1EA592000011BB65 /* Employee.m */; };
+		7FB3A11C1EA58A080011BB65 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A11B1EA58A080011BB65 /* Person.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7FB3A11F1EA592000011BB65 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A11E1EA592000011BB65 /* Employee.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7FB3A1231EA687680011BB65 /* EmployeeDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A1221EA687680011BB65 /* EmployeeDatabase.m */; };
 		7FB3A1291EA6C00D0011BB65 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3A1281EA6C00D0011BB65 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F5AADBB1EA80C7800AF5E2F /* AddEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEmployeeViewController.h; sourceTree = "<group>"; };
+		7F5AADBC1EA80C7800AF5E2F /* AddEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEmployeeViewController.m; sourceTree = "<group>"; };
 		7FB3A0FD1EA55D610011BB65 /* Week-6-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Week-6-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB3A1011EA55D610011BB65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FB3A1031EA55D610011BB65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 		7FB3A1261EA6879A0011BB65 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7F5AADBB1EA80C7800AF5E2F /* AddEmployeeViewController.h */,
+				7F5AADBC1EA80C7800AF5E2F /* AddEmployeeViewController.m */,
 				7FB3A1271EA6C00D0011BB65 /* TableViewController.h */,
 				7FB3A1281EA6C00D0011BB65 /* TableViewController.m */,
 				7FB3A1061EA55D610011BB65 /* ViewController.h */,
@@ -210,6 +215,7 @@
 				7FB3A1021EA55D610011BB65 /* main.m in Sources */,
 				7FB3A1231EA687680011BB65 /* EmployeeDatabase.m in Sources */,
 				7FB3A1291EA6C00D0011BB65 /* TableViewController.m in Sources */,
+				7F5AADBD1EA80C7800AF5E2F /* AddEmployeeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

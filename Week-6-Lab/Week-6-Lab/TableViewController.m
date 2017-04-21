@@ -9,10 +9,11 @@
 #import "TableViewController.h"
 #import "EmployeeDatabase.h"
 
-@interface TableViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TableViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+@property(strong, nonatomic) NSMutableArray *employees;
 
 @end
 
@@ -20,12 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.delegate = self;
     self.tableView.dataSource = self;
-//    [self.tableView reloadData];
+    [[EmployeeDatabase shared] addObserver:self forKeyPath:@"employees" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew | NSKeyValueChangeInsertion | NSKeyValueChangeRemoval context:nil];
 }
-
-
 
 #pragma mark - Table view data source
 
@@ -41,9 +39,33 @@
     NSArray *employees = [[EmployeeDatabase shared]allEmployees];
     Employee *currentEmployee = employees[indexPath.row];
     cell.textLabel.text =  currentEmployee.firstName;
-//    cell.textLabel.text = [employees[indexPath.row] name];
     
     return cell;
 }
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //remove the deleted object from your data source.
+        //If your data source is an NSMutableArray, do this
+        [[EmployeeDatabase shared]removeEmployeeAtIndex:indexPath.row];
+        [tableView reloadData]; // tell table to refresh now
+    }
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if([keyPath isEqualToString:@"employees"]){
+        NSLog(@"Something just happened and was observed.");
+        [self.tableView reloadData];
+    }
+}
+
+-(void)dealloc{
+    [[EmployeeDatabase shared] removeObserver:self forKeyPath:@"employees"];
+}
+
 
 @end

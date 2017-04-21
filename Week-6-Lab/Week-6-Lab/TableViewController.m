@@ -51,8 +51,8 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //remove the deleted object from your data source.
         //If your data source is an NSMutableArray, do this
-        [[EmployeeDatabase shared]removeEmployeeAtIndex:indexPath.row];
-        [tableView reloadData]; // tell table to refresh now
+        [[EmployeeDatabase shared]removeEmployeeAtIndex:(int)indexPath.row];
+        [self.tableView reloadData]; // tell table to refresh now
     }
 }
 

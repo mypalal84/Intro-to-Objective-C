@@ -16,9 +16,14 @@
     self = [super init];
     
     if (self) {
-        _firstName = firstName;
-        _lastName = lastName;
-        _age = age;
+        //mrc version retain
+        _firstName = [firstName retain];
+        _lastName = [lastName retain];
+        _age = [age retain];
+        //arc version
+//        _firstName = firstName;
+//        _lastName = lastName;
+//        _age = age;
     }
     return self;
 }
@@ -83,6 +88,14 @@ NSNumber *yearsOld = [self age];
     NSNumber *descriptionAge = [[NSNumber numberWithInt:self.age.intValue]autorelease];
     [descriptionAge retain];
     return descriptionAge;
+}
+
+-(void)dealloc{
+    [_firstName release];
+    [_lastName release];
+    [_age release];
+    
+    [super dealloc];
 }
 
 @end

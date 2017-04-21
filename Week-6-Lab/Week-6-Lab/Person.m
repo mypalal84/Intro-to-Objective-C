@@ -14,6 +14,7 @@
                         lastName:(NSString *)lastName
                           andAge:(NSNumber *)age{
     self = [super init];
+    
     if (self) {
         _firstName = firstName;
         _lastName = lastName;
@@ -38,6 +39,50 @@ NSNumber *yearsOld = [self age];
     person.age = self.age;
     
     return person;
+}
+
+
+//setters and getters for mrc
+-(void)setFirstName:(NSString *)firstName{
+    if(_firstName != firstName){
+        [firstName retain];
+        [_firstName release];
+        _firstName = firstName;
+    }
+}
+
+-(NSString *)descriptionFirstName{
+    NSString *descriptionFirstName = [[NSString stringWithFormat:@"%@", self.firstName]autorelease];
+    [descriptionFirstName retain];
+    return descriptionFirstName;
+}
+
+-(void)setLastName:(NSString *)lastName{
+    if(_lastName != lastName){
+        [lastName retain];
+        [_lastName release];
+        _lastName = lastName;
+    }
+}
+
+-(NSString *)descriptionLastName{
+    NSString *descriptionLastName = [[NSString stringWithFormat:@"%@", self.lastName]autorelease];
+    [descriptionLastName retain];
+    return descriptionLastName;
+}
+
+-(void)setAge:(NSNumber *)age{
+    if(_age != age){
+        [age retain];
+        [_age release];
+        _age = age;
+    }
+}
+
+-(NSNumber *)descriptionAge{
+    NSNumber *descriptionAge = [[NSNumber numberWithInt:self.age.intValue]autorelease];
+    [descriptionAge retain];
+    return descriptionAge;
 }
 
 @end

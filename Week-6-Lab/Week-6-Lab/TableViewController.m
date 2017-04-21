@@ -13,7 +13,6 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-
 @end
 
 @implementation TableViewController
@@ -21,12 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.dataSource = self;
-//    [self.tableView reloadData];
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.tableView reloadData];
+    [[EmployeeDatabase shared] addObserver:self forKeyPath:@"employees" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew | NSKeyValueChangeInsertion | NSKeyValueChangeRemoval context:nil];
 }
 
 #pragma mark - Table view data source
@@ -46,5 +40,17 @@
     
     return cell;
 }
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if([keyPath isEqualToString:@"employees"]){
+        NSLog(@"Something just happened and was observed.");
+        [self.tableView reloadData];
+    }
+}
+
+-(void)dealloc{
+    [[EmployeeDatabase shared] removeObserver:self forKeyPath:@"employees"];
+}
+
 
 @end

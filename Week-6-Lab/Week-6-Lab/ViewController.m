@@ -12,12 +12,18 @@
 
 @interface ViewController ()
 
+@property(strong, nonatomic) Employee *test;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    
     
 //    Employee *original = [[Employee alloc]initWithFirstName:@"Alex" lastName:@"Cahn" age:@33 yearsEmployed:@1 andManager:@"Adam"];
 //    

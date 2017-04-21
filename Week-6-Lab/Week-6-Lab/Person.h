@@ -11,9 +11,15 @@
 @interface Person : NSObject <NSCopying>
 
 //properties
-@property(copy, nonatomic) NSString *firstName;
-@property(copy, nonatomic) NSString *lastName;
-@property(strong, nonatomic) NSNumber *age;
+//arc version
+//@property(copy, nonatomic) NSString *firstName;
+//@property(copy, nonatomic) NSString *lastName;
+//@property(strong, nonatomic) NSNumber *age;
+
+//mrc version retain
+@property(retain, nonatomic) NSString *firstName;
+@property(retain, nonatomic) NSString *lastName;
+@property(retain, nonatomic) NSNumber *age;
 
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName

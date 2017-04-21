@@ -20,10 +20,16 @@
     self = [super initWithFirstName:firstName lastName:lastName andAge:age];
     
     if(self){
-        _yearsEmployed = yearsEmployed;
-        _managerName = managerName;
-        _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(1000)];
-        _email = email;
+        //arc version
+//        _yearsEmployed = yearsEmployed;
+//        _managerName = managerName;
+//        _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(1000)];
+//        _email = email;
+        //mrc version
+        _yearsEmployed = [yearsEmployed retain];
+        _managerName = [managerName retain];
+        _employeeNumber = [[NSNumber numberWithInt:arc4random_uniform(1000)]retain];
+        _email = [email retain];
     }
     return self;
 }
@@ -152,6 +158,13 @@ NSString *_email;
     return descriptionEmail;
 }
 
-
+-(void)dealloc{
+    [_yearsEmployed release];
+    [_managerName release];
+    [_employeeNumber release];
+    [_email release];
+    
+    [super dealloc];
+}
 
 @end

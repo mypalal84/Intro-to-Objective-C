@@ -9,9 +9,11 @@
 #import "TableViewController.h"
 #import "EmployeeDatabase.h"
 
-@interface TableViewController () <UITableViewDataSource>
+@interface TableViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+@property(strong, nonatomic) NSMutableArray *employees;
 
 @end
 
@@ -39,6 +41,19 @@
     cell.textLabel.text =  currentEmployee.firstName;
     
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //remove the deleted object from your data source.
+        //If your data source is an NSMutableArray, do this
+        [[EmployeeDatabase shared]removeEmployeeAtIndex:indexPath.row];
+        [tableView reloadData]; // tell table to refresh now
+    }
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
